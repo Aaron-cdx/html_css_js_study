@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式选择器的权重</title>
+    <style>
+        * {
+            font-size: 50px;
+        }
+
+        div,p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- 这里的span会继承通配选择器的样式，而p的样式是20px，span实际大小为50px -->
+        <p>this is paragraph, <span>在p中的span元素</span></p>
+    </div>
+
+</body>
+
+</html>
