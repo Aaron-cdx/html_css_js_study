@@ -328,6 +328,11 @@ width 和 height 是设置内容区的大小，元素中的所有的资源苏和
   border-style: solid;
   /* 
     border简写属性，通过该属性可以同时设置边框所有相关样式，并且没有顺序要求
+    除了border以外还有四个border-xxx
+    border-top
+    border-right
+    border-bottom
+    border-left
   */
 }
 ```
