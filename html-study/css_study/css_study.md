@@ -336,3 +336,51 @@ width 和 height 是设置内容区的大小，元素中的所有的资源苏和
   */
 }
 ```
+
+### 盒子模型-内边距
+内边距(padding)，内容区和边框之间的距离是内边距，一共有四个方向的内边距。
+* padding-top
+* padding-right
+* padding-bottom
+* padding-left
+
+内边距的设置会影响到盒子的大小，背景颜色会延升到内边距上。
+
+盒子的可见框的大小，由内容区、内边距和边框共同决定。所以在计算盒子大小的时候，需要将这三个区域加到一起进行计算。
+
+padding的内边距也可以实现简写属性，可以同时指定四个方向的内边距。规则和border-width一样。
+
+### 盒子模型-外边距
+外边距(margin)，外边距不会影响到盒子可见框的大小，但是外边距会影响盒子的位置，一共有四个方向的外边距：
+* margin-top: 上外边距，设置一个正值，盒子会向下移动
+* margin-right: 右边距，设置正值，盒子会向左移动
+* margin-bottom: 
+* margin-left: 左外边距，设置一个正值，盒子会向右移动
+
+元素在页面中是按照自左向右的顺序排列的，所以默认情况下如果我们设置的左和上外边距则会移动元素自身而设置下和右外边距则会移动其他元素。
+
+margin的接卸属性，可以设置四个方向的外边距，用法与padding相同。
+
+margin会影响到盒子实际的占用空间
+
+### 盒子模型-水平方向的元素布局
+元素在水平方向的布局，元素在其父元素中水平方向的位置由一下几个属性共同决定:
+* margin-left
+* border-left
+* padding-left
+* width
+* padding-right
+* border-right
+* margin-right
+
+margin-left+border-left+padding-left+width+padding-right+border-right+margin-right = 其父元素内容区的宽度(必须满足)
+
+如果等式不满足，则称为过渡约束，则等式会自动调整，调整的情况，如果这七个值中没有auto的情况，**则浏览器会自动调整margin-right值使得等式满足**。
+
+这七个值中有三个值可以设置为auto
+* width
+* margin-left
+* margin-right
+
+如果某个值设置为auto，则会自动调整为auto的那个值以使等式成立。
+
