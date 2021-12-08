@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒模型的行内元素</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        .s1,.s2{
+            /* 不可设置宽高 */
+            margin-left: 200px;
+            background-color: yellow;
+        }
+
+        a{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* display设置为none，隐藏，不占据位置 */
+            display: inline-block;
+            /* 隐藏但是占据位置 */
+            /* visibility: hidden; */
+        }
+    </style>
+</head>
+<body>
+    <!-- a元素之间的换行，如果是展示为inline-block会有一个空格，类似于文字 -->
+    <a href="http://www.baidu.com/">超链接</a>
+    <a href="http://www.baidu.com/">超链接</a>
+    <span class="s1">行内元素1</span>
+    <span class="s2">行内元素2</span>
+    <div class="box1"></div>
+</body>
+</html>
