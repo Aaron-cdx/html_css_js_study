@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="../css_study/css/reset.css">
+    <style>
+        body {
+            /* 设置背景颜色 */
+            /* background-color: #bfa; */
+        }
+        /* 统一去除下划线 */
+        a {
+            text-decoration: none;
+        }
+
+        .news-wrapper {
+            width: 300px;
+            height: 358px;
+
+            /* 居中 */
+            margin: 50px auto;
+            background-color: white;
+
+            /* 设置边框 */
+            border-top: 1px solid #DDDDDD;
+        }
+
+        /* 设置news-title */
+        .news-title {
+            height: 30px;
+            /* 为了边框和文字宽度一致，需要将h2转换为行内元素 */
+            display: inline-block;
+            /* 设置上边框 */
+            border-top: 1px red solid;
+            /* 通过margin-top将h2上移,盖住*/
+            margin-top: -1px;
+            /* 下移10px */
+            padding-top: 10px;
+        }
+
+        /* 设置title链接中的样式 */
+        .news-title a {
+            /* 去除下划线 */
+            text-decoration: none;
+            /* 设置颜色 */
+            color: #404068;
+            /* 设置文字加粗的效果 */
+            font-weight: bold;
+        }
+
+        /* 设置图片容器的高度 */
+        .news-img img{
+            height: 150px;
+            width: 100%;
+        }
+
+        /* 设置图片的文字效果 */
+        .news-img .img-title {
+            height: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            /* 文字向上移动 */
+            margin-top: -40px;
+            color: #FFFFFF;
+            /* 设置padding */
+            padding-left: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            
+        }
+
+        /* 设置news-list */
+        .news-list {
+            margin-top: 12px;
+            /* padding-left: 15px; */
+        }
+
+        .news-list li{
+            height: 30px;
+            line-height: 30px;
+            list-style: square;
+            overflow: hidden;
+        }
+        .news-list li::before{
+            content: "*";
+            color:#dddddd;
+            font-size: 12px;
+        }
+
+        /* 设置news-list超链接 */
+        .news-list li a{
+            color: #666;
+            font-size: 14px;
+        }
+
+        .news-list li a:hover{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建新闻列表的外侧的容器 -->
+    <div class="news-wrapper">
+        <!-- 创建一个标题标签 -->
+        <h2 class="news-title">
+            <a href="#">军事</a>
+            <i>·</i>
+            <a href="#">航空</a>
+        </h2>
+
+        <!-- 创建一个图片的容器 -->
+        <div class="news-img">
+            <a href="#">
+                <img src="./img/04.jpg" alt="">
+                <!-- 创建图片标题 -->
+                <h3 class="img-title">
+                    画面太美了！直击航空兵某团反潜训练
+                </h3>
+            </a>
+        </div>
+
+        <!-- 新闻列表 -->
+        <ul class="news-list">
+            <li>
+                <a href="#">美国中情局大力储备汉语人才</a>
+            </li>
+            <li>
+                <a href="#">美海军驱逐舰二把手因拒绝接种新冠疫苗被解职</a>
+            </li>
+            <li>
+                <a href="#">中国科技馆空间站地面主课堂对公众开放</a>
+            </li>
+            <li>
+                <a href="#">导弹、航天……没想到，这些名字都出自钱学森！</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
