@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航条</title>
+    <!-- 需要引入reset的css -->
+    <link rel="stylesheet" href="../css_study/css/reset.css">
+    <style>
+        .nav {
+            width: 1210px;
+            height: 48px;
+            background-color: #e8e7e3;
+
+            /* 设置居中展示 */
+            margin: 100px auto;
+        }
+
+        /* 设置元素浮动 */
+        .nav li {
+            /* 元素垂直居中展示 */
+            line-height: 48px;
+            float: left;
+        }
+
+        .nav a {
+            /* 块元素展示，这里给a以块元素展示，否则行内元素无法设置狂傲 */
+            display: block;
+            text-decoration: none;
+            font-size: 18px;
+            color: #777777;
+            /* 需要使用a将当前模块撑开，这样的话显示的会比较正常，而且整个块都可以选择 */
+            padding: 0px 39px;
+        }
+
+        .nav a:hover{
+            background-color: #3f3f3f;
+            color: #d7d6d2;
+        }
+
+        /* 右侧多出5个像素，可以在最后一个元素被平均分配*/
+        .nav li:last-child a{
+            padding: 0px 41px 0px 42px;
+        }
+        
+    
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">HTML/CSS</a>
+        </li>
+        <li>
+            <a href="#">Browser Side</a>
+        </li>
+        <li>
+            <a href="#">Server Side</a>
+        </li>
+        <li>
+            <a href="#">Programming</a>
+        </li>
+        <li>
+            <a href="#">XML</a>
+        </li>
+        <li>
+            <a href="#">Web Building</a>
+        </li>
+        <li>
+            <a href="#">Reference</a>
+        </li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单的布局</title>
+    <link rel="stylesheet" href="../css_study/css/reset.css">
+    <style>
+        .header {
+            width: 1200px;
+            height: 150px;
+            background-color: #bfa;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .main {
+            width: 1200px;
+            height: 400px;
+            background-color: orange;
+            margin: 10px auto;
+        }
+
+        nav,
+        article,
+        aside {
+            float: left;
+        }
+
+        nav {
+            width: 250px;
+            height: 400px;
+            background-color: brown;
+        }
+
+        article {
+            width: 680px;
+            height: 400px;
+            background-color: aquamarine;
+            margin: 0px 10px;
+        }
+
+        .first {
+            width: 680;
+            height: 190px;
+            background-color: chartreuse;
+            margin-bottom: 10px;
+        }
+
+        .one,.three {
+            height: 200px;
+            width: 220px;
+            background-color: red;
+            float: left;
+        }
+
+        .two {
+            height: 200px;
+            width: 220px;
+            background-color: red;
+            float: left;
+            margin: 0px 10px;
+        }
+
+
+        aside {
+            width: 250px;
+            height: 400px;
+            background-color: blueviolet;
+        }
+
+        .footer {
+            width: 1200px;
+            height: 150px;
+            background-color: bisque;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+    </div>
+    <div class="main">
+        <nav></nav>
+        <article>
+            <div class="first"></div>
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </article>
+        <aside></aside>
+    </div>
+
+    <div class="footer"></div>
+</body>
+
+</html>
