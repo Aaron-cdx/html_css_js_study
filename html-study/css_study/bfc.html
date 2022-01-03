@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC示例</title>
+    <link rel="stylesheet" href="../css_study/css/reset.css">
+    <style>
+        .box1 {
+            height: 200px;
+            width: 200px;
+            background-color: #bfa;
+            overflow: hidden;
+            /* 如果这里设置浮动的话float:left,会导致子元素会超出父元素的高度 */
+            /* 但如果父元素设置的是overflow:hidden,则不会超出，因为会hidden */
+        }
+        .box2{
+            margin-top: 100px;
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            overflow: hidden;
+        }
+
+        .box3{
+            margin-top: 100px;
+            height: 400px;
+            width: 100px;
+            background-color: rgb(175, 21, 21);
+            overflow: hidden;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box3"></div>
+    </div>
+    <!-- <div class="box2"></div> -->
+    
+</body>
+
+</html>
