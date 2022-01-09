@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高度塌陷问题</title>
+    <link rel="stylesheet" href="../css_study/css/reset.css">
+    <style>
+        .box1 {
+            border: 10px solid red;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            /* 一旦设置浮动，将会造成高度塌陷问题，父元素的高度将不能够被撑开 */
+            float: left;
+        }
+
+        /* 人为补全内容，通过clear元素可以直接撑开，但是div3实质无作用 */
+        .box3 {
+            clear: both;
+        }
+
+        /* 利用after来解决高度塌陷问题 */
+         /* 因为after是行内元素，不具备独占一行的能力，需要转化为块元素 */
+        /* .box1::after {
+            content: '';
+            clear: both;
+            display: block;
+        } */
+
+        /* clearfix也可以解决高度塌陷问题 */
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+        <!-- <div class="box3">
+            aaa
+        </div> -->
+    </div>
+</body>
+
+</html>
